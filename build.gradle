@@ -1,2 +1,32 @@
 apply plugin:'java'
 apply plugin:'chekcstyle'
+apply plugin:'finbugs'
+apply plugin:'pmd'
+
+repositories {
+	mavenCentral();
+}
+
+dependencies {
+    testCompile 'junit:junit:4.11'
+}
+
+sourceSets {
+	tests {
+		java {
+			srcDirs = ['src/test/']
+		}
+	}
+}
+
+task compile << {
+	println 'compiling source'
+}
+
+task.compileTest(dependsOn: compile) << {
+	println 'compiling unit tests'
+}
+
+task.tests(dependsOn: [compile, compileTest]) << {
+	println 'building the distribution'
+}

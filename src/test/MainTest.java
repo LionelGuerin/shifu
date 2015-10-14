@@ -1,4 +1,4 @@
-package com.nenel.shifu;
+package test;
 
 import org.junit.Assert;
 import org.junit.Test;

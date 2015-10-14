@@ -27,6 +27,6 @@ task compileTest(dependsOn: compile) << {
 	println 'compiling unit tests'
 }
 
-task.tests(dependsOn: [compile, compileTest]) << {
+task tests(dependsOn: [compile, compileTest]) << {
 	println 'building the distribution'
 }

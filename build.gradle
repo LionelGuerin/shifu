@@ -23,7 +23,7 @@ task compile << {
 	println 'compiling source'
 }
 
-task.compileTest(dependsOn: compile) << {
+task compileTest(dependsOn: compile) << {
 	println 'compiling unit tests'
 }
 

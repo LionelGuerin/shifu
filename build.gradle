@@ -19,7 +19,7 @@ sourceSets {
 	}
 }
 
-task compile(dependsOn: [jar, test]) << {
+task compile(dependsOn: [jar, test, check]) << {
 	println 'compiling source'
 }
 

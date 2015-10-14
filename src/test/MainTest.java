@@ -11,7 +11,7 @@ public class MainTest {
 	public void pierreVSpierre() {
 		int result = 0;
 		String player = "p";
-		String computer = "p";		
+		String computer = "f";		
 		
 		MainClass main = new MainClass();
 		Assert.assertNotNull(main);

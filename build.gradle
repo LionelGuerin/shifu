@@ -12,14 +12,14 @@ dependencies {
 }
 
 sourceSets {
-	tests {
+	test {
 		java {
 			srcDirs = ['src/test/']
 		}
 	}
 }
 
-task compile(dependsOn: [jar, tests]) << {
+task compile(dependsOn: [jar, test]) << {
 	println 'compiling source'
 }
 

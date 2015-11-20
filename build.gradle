@@ -13,6 +13,8 @@ jacocoTestReport {
 	}
 }
 
+check.dependsOn jacocoTestReport
+
 checkstyle {
 	ignoreFailures = true
 }
